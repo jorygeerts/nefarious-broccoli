@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                <h1>Start a game</h1>
+            </div>
+
+            <div>
+                <form method="post" action="{{ path('game_try_letter', {id: id}) }}">
+                    <input type="text" name="char" placeholder="Letter">
+                    <input type="submit" value="Start!" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
